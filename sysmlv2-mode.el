@@ -97,7 +97,7 @@
 (defvar sysmlv2-font-lock-defaults
   `((
       ("\"\\.\\*\\\\:>\\:>>?" . font-lock-string-face)
-      ("[\\|]\\|~\\|:\\|,\\|;\\|{\\|}\\|=" . font-lock-keyword-face)
+      ("[\\|]\\|>\\|~\\|:\\|,\\|;\\|{\\|}\\|=" . font-lock-keyword-face)
       ( ,(regexp-opt sysmlv2-keywords 'words) . font-lock-builtin-face)
       ( ,(regexp-opt sysmlv2-constants 'words) . font-lock-constant-face)
       )))
