@@ -91,7 +91,6 @@
 ;; ========================================================================
 (defvar sysmlv2-font-lock-defaults
   `((
-      ;; stuff between double quotes
       ("\"\\.\\*\\\\:>\\:>>?" . font-lock-string-face)
       ("[\\|]\\|~\\|:\\|,\\|;\\|{\\|}\\|=" . font-lock-keyword-face)
       ( ,(regexp-opt sysmlv2-keywords 'words) . font-lock-builtin-face)
