@@ -20,7 +20,6 @@
  ;; Boston, MA 02111-1307, USA.
 
  ;;; Commentary:
-
  ;; First version, 1.0
 
  ;;; Code:
@@ -81,7 +80,13 @@
     "exit"
     "in"
     "out"
-    "by"))
+    "by"
+    "enum"
+    "enum def"
+    "istype"
+    "specializes"
+    "inout"
+    "end"))
   
 ;; I'd probably put in a default that you want, as opposed to nil
 (defvar sysmlv2-tab-width 4 "Width of a tab for sysmlv2 mode")
@@ -108,8 +113,11 @@
   (when sysmlv2-tab-width
     (setq tab-width sysmlv2-tab-width))
 
-  (modify-syntax-entry ?# "< b" sysmlv2-mode-syntax-table)
+  (modify-syntax-entry ?/ ". 124b" sysmlv2-mode-syntax-table)
+  (modify-syntax-entry ?* ". 23" sysmlv2-mode-syntax-table)
   (modify-syntax-entry ?\n "> b" sysmlv2-mode-syntax-table)
+  (modify-syntax-entry ?\f "> b" sysmlv2-mode-syntax-table)
+  
 )
 
 (provide 'sysmlv2-mode)
